@@ -1,0 +1,43 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "presentation": {
+        "clear": true,
+        "focus": true,
+        "showReuseMessage": false,
+        "reveal": "silent",
+    },
+    "type": "shell",
+    "problemMatcher": [],
+    "tasks": [
+        {
+            "label": "start container",
+            "command": "bash run.sh ms:d"
+        },
+        {
+            "label": "stop container",
+            "command": "docker stop msserver"
+        },
+        {
+            "label": "sql format",
+            "command": "bash run.sh lint:sql:fix ${relativeFile}",
+            "presentation": {
+                "close": true,
+            }
+        },
+        {
+            "label": "sql lint",
+            "command": "bash run.sh lint:sql ${relativeFile}",
+        },
+        {
+            "label": "sql run file",
+            "command": "bash run.sh ms:exec ${fileBasename}",
+            "presentation": {
+                "reveal": "always",
+                "focus": false,
+                "echo": false,
+            }
+        },
+    ],
+}
