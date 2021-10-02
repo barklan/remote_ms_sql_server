@@ -2,7 +2,7 @@
 
 ### VSCode and *nix systems
 
-Just use VSCode tasks.
+Use VSCode tasks.
 
 ### Everything else
 
