@@ -21,7 +21,7 @@ function _use_env {
 }
 
 function _build_linter {
-    docker inspect "linter" > /dev/null 2>&1 || docker build -t linter -f dockerfiles/linter.dockerfile .
+    docker inspect "linter" > /dev/null 2>&1 || docker build -t linter -f dockerfiles/sqlfluff.dockerfile .
 }
 
 # -----------------------------------------------------------------------------

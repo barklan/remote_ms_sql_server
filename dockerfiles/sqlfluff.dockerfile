@@ -1,0 +1,6 @@
+FROM python:3.9
+
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+
+RUN python3 -m pip install sqlfluff
