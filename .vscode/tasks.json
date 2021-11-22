@@ -19,17 +19,18 @@
             "label": "stop container",
             "command": "docker stop msserver"
         },
-        {
-            "label": "sql format",
-            "command": "bash run.sh lint:sql:fix ${relativeFile}",
-            "presentation": {
-                "close": true,
-            }
-        },
-        {
-            "label": "sql lint",
-            "command": "bash run.sh lint:sql ${relativeFile}",
-        },
+        // These mess up
+        // {
+        //     "label": "sql format",
+        //     "command": "bash run.sh lint:sql:fix ${relativeFile}",
+        //     "presentation": {
+        //         "close": true,
+        //     }
+        // },
+        // {
+        //     "label": "sql lint",
+        //     "command": "bash run.sh lint:sql ${relativeFile}",
+        // },
         {
             "label": "sql run file",
             "command": "bash run.sh ms:exec ${fileBasename}",
